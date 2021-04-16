@@ -92,7 +92,7 @@ nav ul li a {
     height: 55vh;
 }
 .hero-overlay {
-    background: linear-gradient(to right, #009bfacc, #009bfa00 80%);
+    background: linear-gradient(to right, #009bfabb, #009bfa00 80%);
     display: flex;
     justify-content: center;
     height: 100%;
@@ -120,4 +120,86 @@ nav ul li a {
     font-size: 2rem;
     font-weight: 300;
     width: 100%;
+}
+
+/* Sections */
+section, section .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+section h2, section span, section .card-group {
+    display: flex;
+    flex: 1;
+    flex-basis: 100%;
+    width: 100%;
+}
+section h2 {
+    display: flex;
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-weight: 400;
+}
+section span {
+    margin-bottom: 1rem;
+}
+section .card {
+    background: #fff;
+    display: inline-flex;
+    flex: .33;
+    flex-basis: 33.33%;
+    flex-wrap: wrap;
+    width: 33.33%;
+    overflow: hidden;
+    margin: .5rem;
+    padding: 1rem;
+    text-decoration: none;
+    box-shadow: 0 0 12px rgb(0 0 0 / 25%);
+}
+section .card img {
+    width: 100%;
+}
+section .card .card-text {
+    display: flex;
+    align-content: flex-start;
+    padding-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    max-width: 80%;
+    margin-bottom: 0;
+    line-height: 1;
+}
+section .card:first-child {
+    margin-left: 0;
+}
+section .card:last-child {
+    margin-right: 0;
+}
+
+.bottom-border {
+    border-bottom: 12px solid;
+}
+.border-dark-blue {
+    border-color: #193989;
+}
+.border-green {
+    border-color: #01a49c;
+}
+.border-light-blue {
+    border-color: #009bfa;
+}
+.text-dark-blue {
+    color: #193989;
+}
+.text-green {
+    color: #01a49c;
+}
+.text-light-blue {
+    color: #009bfa;
+}
+.grey-bg {
+    background-color: #ebebeb;
+}
+section .card-text.partial-width {
+    max-width: 20%;
 }
