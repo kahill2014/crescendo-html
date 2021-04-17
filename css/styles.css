@@ -9,6 +9,7 @@ body {
     justify-content: center;
     width: 80rem;
     max-width: 80rem;
+    padding: 0 2rem;
 }
 
 /* Header */
@@ -44,11 +45,11 @@ nav ul {
 }
 nav ul li {
     padding: 0 1rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 nav ul li a {
     color: #000;
-    font-size: 20px;
+    font-size: 22px;
     text-decoration: none;
 }
 
@@ -84,28 +85,28 @@ nav ul li a {
 
 /* Hero image */
 .hero-image-container {
-    width: 100%;
     background: url('../images/hero-top.png'); 
     background-position: 0% 15%;
     background-repeat: no-repeat;
     background-size: cover;
     height: 55vh;
+    width: 100%;
 }
 .hero-overlay {
+    align-items: center;
     background: linear-gradient(to right, #009bfabb, #009bfa00 80%);
     display: flex;
-    justify-content: center;
     height: 100%;
-    align-items: center;
+    justify-content: center;
 }
 .hero-text {
+    align-content: flex-start;
+    align-items: center;
     color: #fff;
     display: flex;
     flex-shrink: 0;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-content: flex-start;
-    align-items: center;
 }
 .hero-text h1 {
     font-size: 3.5rem;
