@@ -84,7 +84,7 @@ nav ul li a {
 
 /* Hero image */
 .hero-image-container {
-    width: 100vw;
+    width: 100%;
     background: url('../images/hero-top.png'); 
     background-position: 0% 15%;
     background-repeat: no-repeat;
@@ -128,6 +128,72 @@ section, section .container {
     justify-content: center;
     flex-wrap: wrap;
 }
+section.grey-bg {
+    padding: 3rem 0;
+}
+
+#commitment {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 45vh;
+}
+#commitment img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 45vh;
+    z-index: 0;
+}
+#commitment h2 {
+    justify-content: center;
+    font-size: 2.75rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+#commitment p {
+    font-size: 1.5rem;
+    text-align: center;
+}
+#commitment h2, #commitment p {
+    color: #fff;
+    text-shadow: 2px 2px 12px rgb(0 0 0 / 35%);
+    z-index: 1;
+}
+#commitment .btn-primary {
+    margin-top: 2rem;
+}
+
+.btn-primary {
+    display: flex;
+    align-content: center;
+    border: 1px solid #fff;
+    padding: 1rem 3.5rem;
+    padding-top: calc(1rem + 2px);
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: #fff;
+    line-height: 1;
+    z-index: 1;
+    background-image: linear-gradient(#fff, #fff);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size .3s, color .3s;
+}
+.btn-primary:hover {
+    color: #1450d2;
+    background-size: 100% 100%;
+}
+.shadow-border-inset {
+    border: 1px solid #33333366;
+    box-shadow: inset 0 20px 20px -2px #00000033, inset 0 -20px 20px -2px #00000033;
+    margin-bottom: 5rem;
+}
+
 section h2, section span, section .card-group {
     display: flex;
     flex: 1;
@@ -136,7 +202,7 @@ section h2, section span, section .card-group {
 }
 section h2 {
     display: flex;
-    margin-bottom: 0;
+    margin: 0;
     font-size: 2rem;
     font-weight: 400;
 }
@@ -155,6 +221,7 @@ section .card {
     padding: 1rem;
     text-decoration: none;
     box-shadow: 0 0 12px rgb(0 0 0 / 25%);
+    margin-bottom: 0;
 }
 section .card img {
     width: 100%;
@@ -196,6 +263,9 @@ section .card:last-child {
 }
 .text-light-blue {
     color: #009bfa;
+}
+.blue-bg {
+    background-color: #1450d2;
 }
 .grey-bg {
     background-color: #ebebeb;
