@@ -263,6 +263,9 @@ section .card:last-child {
     margin-right: 0;
 }
 
+#events {
+    padding: 3rem 0 6rem;
+}
 #events .card-group {
     margin-top: 2rem;
 }
@@ -355,6 +358,38 @@ section .card:last-child {
     margin: 1rem 0;
 }
 
+/* Footer */
+footer {
+    background-color: #707070;
+    color: #fff;
+    font-size: .9rem;
+    padding: 1.5rem 0 2.5rem;
+    display: flex;
+    justify-content: center;
+    line-height: 1;
+}
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+footer .container {
+    justify-content: space-between;
+}
+footer .container span:first-child {
+    max-width: 10rem;
+}
+footer .container span:last-child {
+    display: flex;
+    align-items: center;
+}
+footer .container span img {
+    margin: 0 .25rem;
+}
+footer .container span img:first-child {
+    margin-left: .5rem;
+}
+
+/* Helper Classes */
 .bottom-border {
     border-bottom: 12px solid;
 }
