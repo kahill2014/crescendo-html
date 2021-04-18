@@ -171,10 +171,11 @@ section.grey-bg {
     display: flex;
     align-content: center;
     border: 1px solid #fff;
-    padding: 1rem 3.5rem;
+    padding: 1rem 0;
     padding-top: calc(1rem + 2px);
     font-size: 1.2rem;
     font-weight: 800;
+    justify-content: center;
     text-decoration: none;
     color: #fff;
     line-height: 1;
@@ -184,6 +185,7 @@ section.grey-bg {
     background-repeat: no-repeat;
     background-size: 0% 100%;
     transition: background-size .3s, color .3s;
+    width: 12rem;
 }
 .btn-primary:hover {
     color: #1450d2;
@@ -192,7 +194,6 @@ section.grey-bg {
 .shadow-border-inset {
     border: 1px solid #33333366;
     box-shadow: inset 0 20px 20px -2px #00000033, inset 0 -20px 20px -2px #00000033;
-    margin-bottom: 5rem;
 }
 
 section h2, section span, section .card-group {
@@ -211,6 +212,7 @@ section span {
     margin-bottom: 1rem;
 }
 section .card {
+    position: relative;
     background: #fff;
     display: inline-flex;
     flex: .33;
@@ -242,6 +244,91 @@ section .card:first-child {
 }
 section .card:last-child {
     margin-right: 0;
+}
+
+#events .card-group {
+    margin-top: 2rem;
+}
+#events .card {
+    background-color: #1450d2;
+    box-shadow: none;
+    color: #fff;
+    padding: 1.75rem;
+    overflow: visible;
+    padding-bottom: 0;
+}
+#events .card .card-event-date {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-color: #001254;
+    margin-top: -3rem;
+    position: relative;
+    flex-wrap: wrap;
+}
+#events .card .card-event-date::before {
+    position: absolute;
+    left: -18px;
+    top: 0;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: 20px solid #3b4e96;
+}
+#events .card .card-event-date span {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    margin: 0;
+    line-height: 1;
+    padding-top: .25rem;
+}
+#events .card .card-event-date-month {
+    align-items: flex-end;
+    font-size: 1.05rem;
+}
+#events .card .card-event-date-day {
+    font-size: 2.15rem;
+    font-weight: 800;
+}
+#events .card h3 {
+    font-size: 1.85rem;
+    margin-bottom: 0;
+    line-height: 1;
+}
+#events .card span {
+    font-size: .95rem;
+}
+#events .card span.event-card-subtitle {
+    font-size: .95rem;
+    line-height: 1;
+}
+#events .card span.event-card-location {
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: flex-end;
+    background-color: #ebebeb;
+    color: #000;
+    padding: .75rem 1.75rem 1rem 0;
+    margin: 1rem -1.75rem 0 0;
+    font-weight: 600;
+    position: relative;
+}
+#events .card span.event-card-location::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 0 solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 58px solid #1450d2;
+}
+#events .card .btn-primary {
+    margin: 1rem 0;
 }
 
 .bottom-border {
