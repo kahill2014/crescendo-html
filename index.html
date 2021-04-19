@@ -10,6 +10,7 @@
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
   <link rel="stylesheet" href="css/styles.css">
 
 </head>
@@ -86,7 +87,8 @@
         <a href="/contact-us" class="btn-primary">Contact Us</a>
       </div>
     </section>
-    <section id="events" class="grey-bg">
+    <!-- Upcoming Events - Desktop -->
+    <section class="grey-bg events desktop">
       <div class="container">
         <h2>Upcoming Events</h2>
         <span>This needs a great tagline, but I'll fill it in later</span>
@@ -125,6 +127,47 @@
       </div>
       </div>
     </section>
+    <!-- Upcoming Events - Mobile -->
+    <section class="events mobile">
+      <div class="container">
+        <div id="events-carousel" class="splide">
+          <div class="splide__track card-group">
+            <ul class="splide__list">
+              <li class="splide__slide"><div class="card shadow-border-inset-bottom">
+                <div class="card-event-date">
+                  <span class="card-event-date-month">JAN</span>
+                  <span class="card-event-date-day">28</span>
+                </div>
+                <h3>Insight Exchange Network</h3>
+                <span class="event-card-subtitle">Join us for this conference showcasing innovation.</span>
+                <a href="/insights" class="btn-primary">Get More Insight</a>
+                <span class="event-card-location">Chicago, IL</span>
+              </div></li>
+              <li class="splide__slide"><div class="card shadow-border-inset-bottom">
+                <div class="card-event-date">
+                  <span class="card-event-date-month">FEB</span>
+                  <span class="card-event-date-day">12</span>
+                </div>
+                <h3>Citywide Buyer's Retreat</h3>
+                <span class="event-card-subtitle">Find out how banks are responding to the changing future of interest...</span>
+                <a href="/insights" class="btn-primary">Get More Insight</a>
+                <span class="event-card-location">The Wagner, New York</span>
+              </div></li>
+              <li class="splide__slide"><div class="card shadow-border-inset-bottom">
+                <div class="card-event-date">
+                  <span class="card-event-date-month">May</span>
+                  <span class="card-event-date-day">6</span>
+                </div>
+                <h3>Research Exchange</h3>
+                <span class="event-card-subtitle">Find the best online resources to help with your investments...</span>
+                <a href="/insights" class="btn-primary">Get More Insight</a>
+                <span class="event-card-location">London, England</span>
+              </div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <footer>
     <div class="container">
@@ -137,6 +180,8 @@
       </span>
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>
