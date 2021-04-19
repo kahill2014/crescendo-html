@@ -17,7 +17,7 @@
 
 <body>
   <header>
-    <div class="container desktop-nav">
+    <div class="container desktop">
       <a href="/">
         <img class="header-logo" src="images/logo-desktop.png" />
       </a>
@@ -35,16 +35,27 @@
         </ul>
       </nav>
     </div>
-    <div class="container mobile-nav">
-      <img class="header-logo" src="images/logo-mobile.png" />
+    <div class="container mobile">
+      <a href="/">
+        <img class="header-logo" src="images/logo-mobile.png" />
+      </a>
       <nav role="navigation">
-        <ul>
-          <li><a href="/home">Home</a></li>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/insights">Insights</a></li>
-          <li><a href="/events">Events</a></li>
-          <li><a href="/contact">Contact Us</a></li>
-        </ul>
+        <div class="hamburger">
+          <input id="menu-check" type="checkbox" />
+            <span class="hb-line"></span>
+            <span class="hb-line"></span>
+            <span class="hb-line"></span>
+          
+          <ul>
+            <span><h3>Site Links</h3></span>
+            <li><a class="btn-secondary" href="/home">Home</a></li>
+            <li><a class="btn-secondary" href="/about">About Us</a></li>
+            <li><a class="btn-secondary" href="/insights">Insights</a></li>
+            <li><a class="btn-secondary" href="/events">Events</a></li>
+            <li><a class="btn-secondary" href="/contact">Contact Us</a></li>
+          </ul>
+  
+        </div>
       </nav>
     </div>
   </header>
@@ -225,6 +236,7 @@
         <a href="/contact" class="btn-secondary">Contact Us</a>
     </div>
   </footer>
+  <div id="modal-overlay"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
   <script src="js/scripts.js"></script>

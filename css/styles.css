@@ -3,6 +3,7 @@ body {
     font-family: 'Overpass', sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 strong {
     font-weight: 800;
@@ -30,7 +31,7 @@ img.header-logo {
     height: auto;
     margin: 2rem 2rem 2rem 0;
 }
-nav {
+.desktop nav {
     align-items: flex-end;
     align-self: flex-end;
     display: flex;
@@ -38,7 +39,7 @@ nav {
     height: 5rem;
     justify-content: center;
 }
-nav ul {
+.desktop nav ul {
     display: flex;
     flex: 1;
     justify-content: space-between;
@@ -46,17 +47,17 @@ nav ul {
     margin-top: 0;
     margin: 2rem 0;
 }
-nav ul li {
+.desktop nav ul li {
     padding: 0 1rem;
     font-weight: 500;
 }
-nav ul li a {
+.desktop nav ul li a {
     color: #000;
     font-size: 22px;
     text-decoration: none;
     position: relative;
 }
-nav ul li a:before {
+.desktop nav ul li a:before {
     position: absolute;
     left: 0px;
     width: 100%;
@@ -68,7 +69,7 @@ nav ul li a:before {
     top: 0px;
     transform: translateY(10px);
 }
-nav ul li a:hover:before {
+.desktop nav ul li a:hover:before {
     opacity: 1;
     transform: translateY(-10px);
 }
@@ -482,6 +483,21 @@ footer span img:first-child {
     color: #eaecee;
     text-decoration: none;
 }
+#modal-overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background: rgba(0,0,0,.75);
+}
+
+
+
 section .card-text.partial-width {
     max-width: 20%;
 }
@@ -602,7 +618,7 @@ section .card-text.partial-width {
     footer {
         background-color: #cccccc;
     }
-    footer h3 {
+    footer h3, header h3 {
         color: #193989;
         padding-bottom: .5rem;
         border-bottom: 1px solid #999999;
@@ -631,6 +647,122 @@ section .card-text.partial-width {
     }
     footer .btn-secondary {
         margin: .75rem 0;
+        font-weight: 700;
+    }
+
+    header .container, header {
+        position: relative;
+        width: 100%;
+        z-index: 4;
+    }
+    header .header-logo {
+        display: block;
+        margin: 1rem auto;
+        width: 233px;
+        height: auto;
+    }
+    /*
+    * Hamburger styling (modified): https://codepen.io/erikterwan/pen/EVzeRP?js-preprocessor=none
+    */
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 2.5rem;
+        right: 2rem;
+        z-index: 2;
+        user-select: none;
+    }
+    .hamburger input {
+        display: block;
+        width: 3rem;
+        height: 2.25rem;
+        position: absolute;
+        top: calc(50% - 1.5rem);
+        right: 0;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 4;
+    }
+    .hamburger h3 {
+        display: block;
+        width: calc(100% - 4rem);
+        margin: 1rem auto;
+    }
+    .hamburger span.hb-line
+    {
+        display: block;
+        margin: 0 auto;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: #193989;
+        border-radius: 3px;
+        z-index: 3;
+        transform-origin: 4px 0px;    
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    opacity 0.55s ease;
+    }
+
+    .hamburger span:first-child
+    {
+        transform-origin: 0% 0%;
+    }
+
+    .hamburger span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    .hamburger input:checked ~ span.hb-line {
+        opacity: 1;
+        transform: rotate(45deg) translate(-3px, 0px);
+        background: #d81e05;
+    }
+
+    .hamburger input:checked ~ span.hb-line:nth-last-child(3) {
+        transform: rotate(0deg) scale(0.2, 0.2);
+        opacity: 0;
+        
+        
+    }
+
+    .hamburger input:checked ~ span.hb-line:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -2px);
+        background: #d81e05;
+    }
+
+    .hamburger ul {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+        margin-top: 6rem;
+        
+        background: #ffffff;
+        list-style-type: none;
+        padding-bottom: 4rem;
+    }
+
+    .hamburger ul li {
+        padding: 10px 0;
+        font-size: 22px;
+        width: calc(100% - 4rem);
+        margin: auto;
+    }
+    .hamburger ul li a {
+        text-decoration: none;
+    }
+
+    /*
+    * And let's slide it in from the left
+    */
+    .hamburger input:checked ~ ul {
+        display: block;
+        transform: none;
     }
 }
 @media screen and (max-width: 767px){
@@ -651,5 +783,11 @@ section .card-text.partial-width {
     .hero-text .acme-wealth{
         font-size: 2rem;
         font-weight: 400;
+    }
+}
+@media screen and (max-width: 500px) {
+    header .header-logo {
+        margin-left: 0;
+        width: 200px;
     }
 }

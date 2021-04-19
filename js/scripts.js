@@ -27,3 +27,16 @@ new Splide( '#insights-carousel', {
 		}
 	}
 } ).mount( {  } );
+
+document.getElementById('menu-check').addEventListener("click", function(){
+    if (this.checked) {
+        document.getElementById('modal-overlay').style.display = "block";
+    } else {
+        document.getElementById('modal-overlay').style.display = "none";
+    }
+});
+
+document.getElementById('modal-overlay').addEventListener("click", function(){
+    document.getElementById('menu-check').checked = false;
+    this.style.display = "none";
+});
