@@ -141,6 +141,10 @@ nav ul li a:hover:before {
     font-weight: 300;
     width: 100%;
 }
+.hero-text .acme-wealth {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
 
 /* Sections */
 section, section .container {
@@ -272,8 +276,8 @@ section .card:last-child {
 .events {
     padding: 3rem 0 6rem;
 }
-.events.mobile {
-    display: none;
+.mobile {
+    display: none !important;
 }
 .events .card-group {
     margin-top: 2rem;
@@ -387,6 +391,7 @@ footer {
     display: flex;
     justify-content: center;
     line-height: 1;
+    text-align: center;
 }
 footer a {
     text-decoration: none;
@@ -422,6 +427,9 @@ footer span img:first-child {
 .border-green {
     border-color: #01a49c;
 }
+.border-dark-green {
+    border-color: #008c82;
+}
 .border-light-blue {
     border-color: #009bfa;
 }
@@ -431,6 +439,9 @@ footer span img:first-child {
 .text-green {
     color: #01a49c;
 }
+.text-dark-green {
+    color: #008c82;
+}
 .text-light-blue {
     color: #009bfa;
 }
@@ -439,6 +450,37 @@ footer span img:first-child {
 }
 .grey-bg {
     background-color: #ebebeb;
+}
+.inline-btn-group {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.inline-btn-group .btn-secondary {
+    max-width: 46%;
+}
+.inline-btn-group .btn-secondary:first-child {
+    margin-right: 1rem;
+}
+.inline-btn-group .btn-secondary:last-child {
+    margin-left: 1rem;
+}
+.btn-secondary {
+    background-color: #eaecee;
+    color: #707070;
+    display: flex;
+    flex: 1;
+    flex-basis: 100%;
+    justify-content: center;
+    padding: 20px 10px;
+    font-size: 1.15rem;
+    line-height: 1;
+    transition: .15s;
+}
+.btn-secondary:hover {
+    background-color: #1450d2;
+    color: #eaecee;
+    text-decoration: none;
 }
 section .card-text.partial-width {
     max-width: 20%;
@@ -459,7 +501,7 @@ section .card-text.partial-width {
         display: none;
     }
     .mobile {
-        display: block;
+        display: block !important;
     }
     .events.mobile {
         background-color: #ebebeb;
@@ -467,8 +509,12 @@ section .card-text.partial-width {
     .splide__track {
         overflow: visible;
     }
+    .splide__track.card-group {
+        justify-content: flex-start;
+    }
     .splide__list {
         width: 100%;
+        margin-left: 0;
     }
     .splide__slide {
         flex-shrink: unset;
@@ -513,6 +559,12 @@ section .card-text.partial-width {
         font-weight: 600;
         margin: .5rem 0;
     }
+    .events.mobile > img {
+        margin: 0 auto;
+        display: block;
+        margin-top: 5rem;
+        margin-bottom: -4rem;
+    }
 
     #commitment .container {
         padding: 5rem 2rem;
@@ -525,10 +577,47 @@ section .card-text.partial-width {
         background-color: #001a7a;
         color: #fff;
     }
+    #insights .card {
+        height: 20rem;
+    }
+    #insights .card .card-text {
+        max-width: 100%;
+        align-items: flex-end;
+    }
+    #insights .splide__pagination__page {
+        background: transparent;
+        border: 1px solid #fff;
+    }
+    #insights .splide__pagination__page.is-active {
+        background: #fff;
+    }
+    #insights .card-group .card {
+        background-color: #f7f7f7;
+        color: #008c82;
+    }
+    #insights .splide__slide {
+        min-width: 16rem;
+    }
 
+    footer {
+        background-color: #cccccc;
+    }
+    footer h3 {
+        color: #193989;
+        padding-bottom: .5rem;
+        border-bottom: 1px solid #999999;
+        text-align: center;
+        margin-top: 1.5rem;
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
     footer .container {
         flex-wrap: wrap;
         justify-content: center;
+    }
+    footer .container.mobile{
+        width: 100%;
+        padding: 0 2rem;
     }
     footer span {
         flex: 1;
@@ -540,17 +629,27 @@ section .card-text.partial-width {
     footer span:last-child {
         justify-content: center;
     }
+    footer .btn-secondary {
+        margin: .75rem 0;
+    }
 }
 @media screen and (max-width: 767px){
     .hero-image-container {
         background: #009bfa;
+        min-height: 55vh;
+        padding: 2rem 0;
     }
-    .mobile-bold {
-        display: inline-flex;
-        flex: 0;
-        font-weight: 800;
+    .hero-text h1 {
+        border-bottom: 12px dotted rgba(255,255,255,.5);
+        margin-left: 0;
+        width: 100%;
     }
-    .events .mobile-bold {
-        margin-bottom: 0;
+    .hero-top-text {
+        margin-bottom: 6rem;
+        letter-spacing: 1px;
+    }
+    .hero-text .acme-wealth{
+        font-size: 2rem;
+        font-weight: 400;
     }
 }
