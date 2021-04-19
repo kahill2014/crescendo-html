@@ -4,6 +4,9 @@ body {
     margin: 0;
     padding: 0;
 }
+strong {
+    font-weight: 800;
+}
 .container {
     display: flex;
     justify-content: center;
@@ -161,7 +164,7 @@ section.grey-bg {
     bottom: 0;
     object-fit: cover;
     width: 100%;
-    height: 45vh;
+    height: 100%;
     z-index: 0;
 }
 #commitment .container {
@@ -268,6 +271,9 @@ section .card:last-child {
 
 .events {
     padding: 3rem 0 6rem;
+}
+.events.mobile {
+    display: none;
 }
 .events .card-group {
     margin-top: 2rem;
@@ -449,12 +455,14 @@ section .card-text.partial-width {
     .container {
         width: unset;
     }
-    .events.desktop {
+    .desktop {
         display: none;
+    }
+    .mobile {
+        display: block;
     }
     .events.mobile {
         background-color: #ebebeb;
-        display: block;
     }
     .splide__track {
         overflow: visible;
@@ -476,18 +484,34 @@ section .card-text.partial-width {
     .splide__pagination__page.is-active {
         background: #b7b7b7;
     }
-    .events.mobile .card {
+    .mobile .card {
         background-color: #001a7a;
         width: 100%;
     }
-    .events.mobile .card .card-event-date {
+    .mobile .card .card-event-date {
         background-color: #f7f7f7;
     }
-    .events.mobile .card .card-event-date-day, .events.mobile .card .card-event-date-month {
+    .mobile .card .card-event-date-day, .events.mobile .card .card-event-date-month {
         color: #008c82;
     }
-    .events .card .card-event-date::before {
+    .mobile .card .card-event-date::before {
         border-bottom: 20px solid #c2c2c2;
+    }
+    .mobile .card .event-card-location {
+        font-weight: 400;
+        color: #707070;
+    }
+    .events.mobile h2 {
+        color: #001a7a;
+    }
+    .events.mobile .card span.event-card-subtitle {
+        margin-bottom: 0;
+        margin-top: .5rem;
+        line-height: 1.25;
+    }
+    .events.mobile .btn-primary {
+        font-weight: 600;
+        margin: .5rem 0;
     }
 
     #commitment .container {
@@ -495,6 +519,11 @@ section .card-text.partial-width {
     }
     #commitment p {
         font-size: 1rem;
+    }
+
+    #insights {
+        background-color: #001a7a;
+        color: #fff;
     }
 
     footer .container {
